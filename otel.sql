@@ -40,9 +40,9 @@ CREATE TYPE ResourceSpans AS (
     scopeSpans ScopeSpans ARRAY
 );
 
--- Input table tahat ingests resource spans from the collector.
+-- Input table that ingests resource spans from the collector.
 CREATE TABLE otel_traces (
-    resourceSpans ResourceSpans ARRAY   
+    resourceSpans ResourceSpans ARRAY 
 ) WITH ('append_only' = 'true');
 
 CREATE VIEW resource_spans AS
